@@ -1,12 +1,14 @@
 class DealsController < ApplicationController
 
-  before_action :load_deal, {:only: []}
+  # before_action :load_deal, {:only: []}
 
   def index
     @user = User.find_by(id: params[:user_id])
   end
 
   def show
+    zip = "10013"
+    milesradius = "5"
     @deals = brunch_deals(params[:zip], params[:milesradius])
   end
 
