@@ -1,28 +1,13 @@
-== README
+# Brunch Deals App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### GA WDI NYC Jan 14, Project 1
 
-Things you may want to cover:
+### Overview
 
-* Ruby version
+**Brunch Deals** is an aggregator that allows you to search brunch deals in your neighborhood.  The app will allow you to purchase the deals, save them, share/invite your friends and send text reminders when the deals will expire.
 
-* System dependencies
+Brunch Deals uses the [8coupons search API](http://www.8coupons.com/api/doc) to populate the aggregated brunch deals and the [Twilio API](http://www.twilio.com/docs/api/rest/sending-messages) to send text message reminders.
 
-* Configuration
+### User Stories
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+A full list of user stories can be found by looking at [this Pivotal Tracker Project](https://www.pivotaltracker.com/s/projects/1015716)

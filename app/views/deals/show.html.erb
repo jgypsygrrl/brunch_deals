@@ -1,0 +1,4 @@
+<% @deals.each do |deal| %>
+  <p>Expires on: <%= deal['expiration'] %></p>
+  <img src="<%= deal['showImage'] %>" >
+<% end %>
