@@ -6,7 +6,6 @@ class User < ActiveRecord::Base
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :dob, presence: true
-  validates :balance, numericality: { greater_than_or_equal_to: 0 }
   
   has_secure_password
 

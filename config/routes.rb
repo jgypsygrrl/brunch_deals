@@ -13,5 +13,5 @@ end
   post "/session", to: "session#create"
   delete "/session", to: "session#destroy"
 
-  # root "welcome#index"
+  root "welcome#index"
 end
