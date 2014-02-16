@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140215171933) do
+ActiveRecord::Schema.define(version: 20140216004449) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "deals", force: true do |t|
-    t.string "deal_title"
+    t.string "dealTitle"
     t.string "showImage"
     t.string "name"
     t.text   "dealinfo"
     t.string "URL"
-    t.date   "expiration"
+    t.date   "expirationDate"
   end
 
   create_table "favorites", force: true do |t|
