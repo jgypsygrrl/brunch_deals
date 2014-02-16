@@ -21,6 +21,6 @@ class DealsController < ApplicationController
   end
 
   def brunch_deals(zip, milesradius)
-    return HTTParty.get("http://api.8coupons.com/v1/getdeals?key=8COUPONS_CLIENT_ID&zip=#{zip}&mileradius=#{milesradius}&limit=500&userid=18381&search=brunch")
+    return HTTParty.get("http://api.8coupons.com/v1/getdeals?key=#{8COUPONS_CLIENT_ID}&zip=#{zip}&mileradius=#{milesradius}&limit=500&userid=18381&search=brunch")
   end
 end
