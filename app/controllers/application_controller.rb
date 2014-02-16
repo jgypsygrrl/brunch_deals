@@ -11,5 +11,16 @@ class ApplicationController < ActionController::Base
     current_user.present?
   end
 
+  # def zip_code
+  # end
+
+  # def admin?
+  #   if logged_in?
+  #     currnt_user.admin
+  #   else
+  #     false
+  #   end
+  # end
+
   helper_method :current_user, :logged_in?
 end

@@ -6,10 +6,18 @@ class DealsController < ApplicationController
     @user = User.find_by(id: params[:user_id])
   end
 
+
+
   def show
+    # @zip = Zip.find_by_zip(params[:id])
+
+    # def get_radius(milesradius)
+    # milesradius = gets.chomp
+
     zip = "10013"
     milesradius = "5"
     @deals = brunch_deals(params[:zip], params[:milesradius])
+
   end
 
   def brunch_deals(zip, milesradius)
