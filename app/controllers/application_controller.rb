@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
 
   # def admin?
   #   if logged_in?
-  #     currnt_user.admin
+  #     current_user.admin
   #   else
   #     false
   #   end
