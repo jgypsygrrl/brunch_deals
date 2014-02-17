@@ -1,4 +1,19 @@
-<h1>Welcome to BrunchDeals.me!</h1>
+<h2>Ready to grab brunch with your BFFs?</h2>
 
-Please enter your zip code:
+<p>Let us help you find a place in your 'hood. </p> 
+<p>Add your info below:</p>
+
+<%= form_for @deals do |f| %>
+
+  <%= f.label :zip %>
+  <%= f.text_field :zip %>
+  <br/>
+
+   <%= f.label :milesradius %>
+  <%= f.text_field :milesradius %>
+  <br/>
+
+<%= f.submit 'Grab your Deals!', :class => 'deal_path' %>
+<% end %>
+
 

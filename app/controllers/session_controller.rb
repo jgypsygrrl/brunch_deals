@@ -2,6 +2,8 @@ class SessionController < ApplicationController
 
   def new
     render(:new)
+    render(:zip)
+    render(:milesradius)
   end
 
   def create
@@ -29,5 +31,5 @@ class SessionController < ApplicationController
     session[:user_id] = nil
     redirect_to root_path
   end
-
+  
 end

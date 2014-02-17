@@ -9,7 +9,7 @@
 <body>
 
 <header>
-<%= link_to "Home", root_path %>
+<h1><%= link_to "BrunchDeals.me", root_path %></h1>
 
 <% if logged_in? %>
   <p><%= link_to("Log Out #{current_user.first_name}!", "/session", method: "delete") %></p>  
