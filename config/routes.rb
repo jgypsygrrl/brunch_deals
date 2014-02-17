@@ -8,6 +8,8 @@ resources :users do
   resources :favorites
 end
 
+get "/show/deals", to: "deals#results"
+
   #resources :sessions, only: [:new, :create, :destroy]
   get "/login", to: "session#new"
   post "/session", to: "session#create"

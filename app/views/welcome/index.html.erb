@@ -1,19 +1,8 @@
 <h2>Ready to grab brunch with your BFFs?</h2>
 
-<p>Let us help you find a place in your 'hood. </p> 
-<p>Add your info below:</p>
+<%= form_tag("/show/deals", method: "GET") do %>
+  <%= label_tag(:zip, "Enter your zip code:") %>
+  <%= text_field_tag(:zip) %>
 
-<%= form_for @deals do |f| %>
-
-  <%= f.label :zip %>
-  <%= f.text_field :zip %>
-  <br/>
-
-   <%= f.label :milesradius %>
-  <%= f.text_field :milesradius %>
-  <br/>
-
-<%= f.submit 'Grab your Deals!', :class => 'deal_path' %>
+  <%= submit_tag("Get Brunch Deals") %>
 <% end %>
-
-
