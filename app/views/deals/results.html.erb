@@ -1,4 +1,3 @@
-
 <% @deals.each do |deal| %>
   <h1><%= deal['dealTitle'] %></h1>
   <h2> at <%= deal['name'] %></h2>
@@ -6,5 +5,20 @@
   <h2><a href="<%= deal['URL'] %>" target="_blank">Grab this Deal!</a></h2>
   <p><%= deal['dealinfo'] %></p>
   <p>Expires on: <%= deal['expirationDate'] %></p>
+  <% if logged_in? %>
+  <p>
+    <%= form_tag user_favorites_path(session[:user_id]), method: :post  do %>
+      <%= hidden_field_tag 'dealTitle', deal['dealTitle'] %>
+      <%= hidden_field_tag 'name', deal['name'] %>
+      <%= hidden_field_tag 'showImage', deal['showImage'] %>
+      <%= hidden_field_tag 'URL', deal['URL'] %>
+      <%= hidden_field_tag 'dealinfo', deal['dealinfo'] %>
+      <%= hidden_field_tag 'expirationDate', deal['expirationDate'] %>
+      <%= submit_tag "Add to favorites" %>
+    <% end %>
+  </p> 
+  <% end %>
 <% end %>
+
+
 

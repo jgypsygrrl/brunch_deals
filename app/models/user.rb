@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :deals
   has_many :favorites
+  has_many :deals, through: :favorites
   
   validates :email, presence: true, uniqueness: true
   validates :first_name, presence: true
