@@ -1,1 +1,10 @@
-<h1>Hi Jennifer! This is the favorites index page</h1>
+<h1><%= @user.first_name %>'s Favorite Deals </h1>
+<hr></hr>
+
+<% @deal.each do |deal| %>
+  <h1><%= deal['dealTitle'] %></h1>
+  <h2> at <%= deal['name'] %></h2>
+  <p><img src="<%= deal['showImage'] %>" width = "200" ></p>
+  <h2><a href="<%= deal['URL'] %>" target="_blank">Grab this Deal!</a></h2>
+  <p>Expires on: <%= deal['expirationDate'] %></p>
+  <% end %>

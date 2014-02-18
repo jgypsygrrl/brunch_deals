@@ -1,19 +1,18 @@
 class DealsController < ApplicationController
 
+  # def index
+  #   @favorite= @user.favorites_list.all
+  #   render :index
+  # end
 
-  def index
-    @favorite= @user.favorites_list.all
-    render :index
-  end
+  # def new
+  #   @favorite = Deal.new
+  # end
 
-  def new
-    @favorite = Deal.new
-  end
-
-  def create
-    @user = User.find_by(id: params[:user_id])
-    @favorite = Deal.create(dealTitle: params[:dealTitle], showImage: params[:showImage], name: params[:name], URL: params[:URL], expirationDate: params[:expirationDate])
-  end
+  # def create
+  #   @user = User.find_by(id: params[:user_id])
+  #   @favorite = Deal.create(dealTitle: params[:dealTitle], showImage: params[:showImage], name: params[:name], URL: params[:URL], expirationDate: params[:expirationDate])
+  # end
 
 
   def results
