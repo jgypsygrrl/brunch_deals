@@ -1,7 +1,7 @@
 BrunchDeals::Application.routes.draw do
 
 resources :deals, only: [:index, :show] do
-  resources :favorites
+  # resources :favorites
 end
 
 resources :users do

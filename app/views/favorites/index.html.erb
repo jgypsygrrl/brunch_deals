@@ -7,4 +7,8 @@
   <p><img src="<%= deal['showImage'] %>" width = "200" ></p>
   <h2><a href="<%= deal['URL'] %>" target="_blank">Grab this Deal!</a></h2>
   <p>Expires on: <%= deal['expirationDate'] %></p>
-  <% end %>
+   
+   <%= button_to "Delete Favorite", { action: "destroy", id: deal.id},
+   method: :delete, data: { confirm: "Are you sure?"} %>
+
+<% end %>

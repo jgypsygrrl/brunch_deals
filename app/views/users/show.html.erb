@@ -1,5 +1,7 @@
 <h2>Welcome <%= @user.first_name %>!</h2>
 
+<p><%= link_to "View your Favorite Brunch Deals", user_favorites_path(@user) %></p>
+
 <p><%= link_to "Edit My Info", edit_user_path(@user) %></p>
 
 <%= form_tag user_path(@user), method: "delete" do %>
