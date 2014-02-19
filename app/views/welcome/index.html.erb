@@ -1,3 +1,9 @@
+<div class="logo">
+<%= link_to root_path do %>
+  <div><img src="http://brunchdeals.me/images/BDM-logo-500px.png" alt="BrunchDeals.me" style="border:none;" /></div>
+<% end %>
+
+
 <h2>Ready to grab brunch with your BFFs?</h2>
 
 <%= form_tag("/show/deals", method: "GET") do %>
@@ -6,9 +12,4 @@
 
   <%= submit_tag("Get Brunch Deals") %>
 <% end %>
-
-<!-- <form method="GET" action="/show/deals">
-  <label for="zip">Enter your zip code:</label>
-  <input type="text" name="page_name" id="zip" />
-  <input type="submit" value="Create" />
-</form> -->
+</div>

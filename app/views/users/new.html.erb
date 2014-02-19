@@ -1,3 +1,9 @@
+<div class="logo">
+<%= link_to root_path do %>
+  <div><img src="http://brunchdeals.me/images/BDM-logo-500px.png" alt="BrunchDeals.me" style="border:none;" /></div>
+<% end %>
+
+<div class="users">
 <h2>Create a new user here!</h2>
 
 <% unless @user.nil? || @user.id.nil? %>
@@ -12,3 +18,4 @@
 <% end %>
 
 <%= render "form" %>
+</div>

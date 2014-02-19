@@ -1,10 +1,16 @@
+<div class="logo">
+<%= link_to root_path do %>
+  <div><img src="http://brunchdeals.me/images/BDM-logo-300px.png" alt="BrunchDeals.me" style="border:none;" /></div>
+<% end %>
+
 <% @deals.each do |deal| %>
+<div class="deals">
   <h1><%= deal['dealTitle'] %></h1>
   <h2> at <%= deal['name'] %></h2>
   <p><img src="<%= deal['showImage'] %>" width = "400" ></p>
-  <h2><a href="<%= deal['URL'] %>" target="_blank">Grab this Deal!</a></h2>
   <p><%= deal['dealinfo'] %></p>
   <p>Expires on: <%= deal['expirationDate'] %></p>
+  <h3><a href="<%= deal['URL'] %>" target="_blank">Grab this Deal!</a></h3>
   <% if logged_in? %>
   <p>
     <%= form_tag user_favorites_path(session[:user_id]), method: :post  do %>
@@ -15,10 +21,9 @@
       <%= hidden_field_tag 'dealinfo', deal['dealinfo'] %>
       <%= hidden_field_tag 'expirationDate', deal['expirationDate'] %>
       <%= submit_tag "Add to favorites" %>
+      </div>
     <% end %>
   </p> 
   <% end %>
 <% end %>
-
-
 

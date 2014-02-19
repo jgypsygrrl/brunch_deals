@@ -1,14 +1,24 @@
+<p>
+<div class="logo">
+<%= link_to root_path do %>
+  <div><img src="http://brunchdeals.me/images/BDM-logo-300px.png" alt="BrunchDeals.me" style="border:none;" /></div>
+<% end %></p>
+
+
 <h1><%= @user.first_name %>'s Favorite Deals </h1>
 <hr></hr>
 
 <% @deal.each do |deal| %>
+<div class="deals">
   <h1><%= deal['dealTitle'] %></h1>
   <h2> at <%= deal['name'] %></h2>
   <p><img src="<%= deal['showImage'] %>" width = "200" ></p>
   <h2><a href="<%= deal['URL'] %>" target="_blank">Grab this Deal!</a></h2>
+
   <p>Expires on: <%= deal['expirationDate'] %></p>
    
    <%= button_to "Delete Favorite", { action: "destroy", id: deal.id},
    method: :delete, data: { confirm: "Are you sure?"} %>
-
+</div>
 <% end %>
+</div>

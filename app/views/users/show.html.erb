@@ -1,3 +1,9 @@
+<div class="logo">
+<%= link_to root_path do %>
+  <div><img src="http://brunchdeals.me/images/BDM-logo-500px.png" alt="BrunchDeals.me" style="border:none;" /></div>
+<% end %>
+
+<div class="users">
 <h2>Welcome <%= @user.first_name %>!</h2>
 
 <p><%= link_to "View your Favorite Brunch Deals", user_favorites_path(@user) %></p>
@@ -7,3 +13,4 @@
 <%= form_tag user_path(@user), method: "delete" do %>
   <%= submit_tag("Delete My Account") %>
 <% end %>
+</div>

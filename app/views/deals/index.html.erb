@@ -1,9 +1,0 @@
-<h1><%= @user.first_name %>'s Favorites </h1>
-<hr></hr>
-
-<% @favorites_list.each do |list| %>
-<div id="join">
-<h3><%= link_to "#{dealTitle}", user_favorites_list_products_path(@user.id, list.id) %></h3>
-</div>
-<% end %>
-

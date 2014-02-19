@@ -9,25 +9,26 @@
 <body>
 
 <header>
-<h1><%= link_to "BrunchDeals.me", root_path %></h1>
 
+  <div class="login">
+<p><%= link_to "Save your Favs? Join Here", new_user_path %></p>
 <% if logged_in? %>
   <p><%= link_to("Log Out #{current_user.first_name}!", "/session", method: "delete") %></p>  
 <% else %>
-  <p><%= link_to("Please Log In!","/login") %></p>
+  <p><%= link_to("Log In","/login") %></p>
 <% end %>
-
-  <p><%= link_to "Join us!", new_user_path %></p>
+  </div>
 
 </header>
 
 <%= yield %>
 
-<!-- <footer>
-  Powered by:
+<footer>
+<!-- 
+  <p>Powered by:</p>
 <p><a href="http://www.8coupons.com" target="_blank">
-<img src="http://8coupons.com/static_new/images/graphics/8coupons-med.png" width = "100"/></p>
-</footer> -->
+<img src="http://8coupons.com/static_new/images/graphics/8coupons-med.png" width = "100"/></p> -->
+</footer>
 </body>
 </html>
 
