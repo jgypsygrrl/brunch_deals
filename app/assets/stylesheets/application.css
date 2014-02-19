@@ -41,16 +41,28 @@ body {
 
 .login{
     font-size: 12px;  
+    text-align: left;
 }
 
-.footer{
-    font-size: 10px;  
+.user{
+    text-align: center;
+    font-size: 10px;
 }
 
- p {
+ article {
     text-align: left;
  }
 
+a:link {
+color: #4c3e2e;
+text-decoration: none;
+border-bottom: 1px #467e5f;
+}
+a:hover {
+border-bottom-color: #b04224;
+}
 
-
-
+.users_form {
+    text-align: left;
+     margin: center;
+}
