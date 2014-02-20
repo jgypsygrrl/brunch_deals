@@ -54,14 +54,17 @@ body {
  }
 
 a:link {
-color: #4c3e2e;
+color: #467e5f;
 text-decoration: none;
 border-bottom: 1px #467e5f;
 }
 a:hover {
-border-bottom-color: #b04224;
+color: #b04224;
 }
 
+a:visited {
+color: #467e5f;
+}
 .users_form {
     text-align: left;
      margin: center;

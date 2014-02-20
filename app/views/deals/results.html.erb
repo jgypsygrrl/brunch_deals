@@ -10,7 +10,7 @@
   <p><img src="<%= deal['showImage'] %>" width = "400" ></p>
   <p><%= deal['dealinfo'] %></p>
   <p>Expires on: <%= deal['expirationDate'] %></p>
-  <h3><button><a href="<%= deal['URL'] %>" target="_blank">Grab this Deal!</a></button></h3>
+  <button><a href="<%= deal['URL'] %>" target="_blank">Grab this Deal!</a></button>
   </div>
   <% if logged_in? %>
   <p>
