@@ -20,6 +20,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(id: params[:user_id])
   end
 
   def edit

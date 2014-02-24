@@ -11,6 +11,6 @@
 <p><button><%= link_to "Edit My Info", edit_user_path(@user) %></button></p>
 
 <%= form_tag user_path(@user), method: "delete" do %>
-  <%= submit_tag("Delete My Account") %>
+  <p><%= submit_tag("Delete My Account") %></p>
 <% end %>
 </div>

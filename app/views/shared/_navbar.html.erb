@@ -1,0 +1,21 @@
+<div class="navbar">
+  <div class="nav-center">
+<%= link_to root_path do %>
+  <div><img src="http://brunchdeals.me/images/BDM-logo-500px.png" alt="BrunchDeals.me" style="border:none;" /></div>
+<% end %>
+  </div>
+
+  <div class="nav-right">
+    <% if session[:user_id].nil? %>
+      <ul>
+        <li><%= link_to "Join us!", new_user_path %></li>
+        <li><%= link_to "Login", "/login" %></li>
+      </ul>
+    <% else %>
+      <% user = User.find(session[:user_id]) %>
+      <%= form_tag session_path, method: "delete" do %>
+        <%= submit_tag("Log out, #{ user.username }") %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

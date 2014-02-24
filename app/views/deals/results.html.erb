@@ -11,6 +11,8 @@
   <p><%= deal['dealinfo'] %></p>
   <p>Expires on: <%= deal['expirationDate'] %></p>
   <button><a href="<%= deal['URL'] %>" target="_blank">Grab this Deal!</a></button>
+  <h3>Do you want to save this brunch deal? </h3>
+  <button><%= link_to "Join us here", new_user_path %></button>
   </div>
   <% if logged_in? %>
   <p>

@@ -69,3 +69,13 @@ color: #467e5f;
     text-align: left;
      margin: center;
 }
+
+.navbar {
+  background-color: #4c3e2e;
+  width: 100%;
+  top: 0;
+  height: 45px;
+  position: fixed;
+  z-index: 15;
+ }
+

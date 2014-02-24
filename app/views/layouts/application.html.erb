@@ -11,6 +11,7 @@
 <header>
 
   <div class="login">
+
 <p><%= link_to "Save your Favs? Join Here", new_user_path %></p>
 <% if logged_in? %>
   <p><%= link_to("Log Out #{current_user.first_name}!", "/session", method: "delete") %></p>  
