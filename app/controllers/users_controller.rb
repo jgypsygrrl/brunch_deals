@@ -19,10 +19,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    @user = User.find(id: params[:user_id])
-  end
-
   def edit
     @update_worked = true
   end
