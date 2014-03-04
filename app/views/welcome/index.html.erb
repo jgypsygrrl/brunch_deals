@@ -1,15 +1,15 @@
 <div class="logo">
-<%= link_to root_path do %>
-  <div><img src="http://brunchdeals.me/images/BDM-logo-500px.png" alt="BrunchDeals.me" style="border:none;" /></div>
-<% end %>
+  <%= link_to root_path do %>
+      <img class="logo" src="http://brunchdeals.me/images/BDM-logo-500px.png" alt="BrunchDeals.me" style="border:none;" />
+    <% end %>
+</div>
 
 
 <h2>Ready to grab brunch with your BFFs?</h2>
 
-<%= form_tag("/show/deals", method: "GET") do %>
+  <%= form_tag("/show/deals", method: "GET") do %>
   <%= label_tag(:zip, "Enter your zip code:") %>
   <%= text_field_tag(:zip) %>
-
   <%= submit_tag("Get Brunch Deals") %>
-<% end %>
-</div>
+  <% end %>
+

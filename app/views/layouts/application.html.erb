@@ -7,29 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <div class="navbar">
+      <div class="login">
+        <p><%= link_to "Save your Favs? Join Here", new_user_path %></p>
+        <% if logged_in? %>
+            <p><%= link_to("Log Out #{current_user.first_name}!", "/session", method: "delete") %></p>  
+            <p><%= link_to("View Profile", user_path(current_user) ) %>
+        <% else %>
+        <p><%= link_to("Log In","/login") %></p>
+        <% end %>
+      </div>
+    </div>
 
-<header>
+  </header>
 
-  <div class="login">
+  <%= yield %>
 
-<p><%= link_to "Save your Favs? Join Here", new_user_path %></p>
-<% if logged_in? %>
-  <p><%= link_to("Log Out #{current_user.first_name}!", "/session", method: "delete") %></p>  
-<% else %>
-  <p><%= link_to("Log In","/login") %></p>
-<% end %>
-  </div>
-
-</header>
-
-<%= yield %>
-
-<footer>
-<!-- 
-  <p>Powered by:</p>
-<p><a href="http://www.8coupons.com" target="_blank">
-<img src="http://8coupons.com/static_new/images/graphics/8coupons-med.png" width = "100"/></p> -->
-</footer>
 </body>
 </html>
 

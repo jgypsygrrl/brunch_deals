@@ -1,5 +1,5 @@
 <p>
-<div class="logo">
+<div class="logo2">
 <%= link_to root_path do %>
   <div><img src="http://brunchdeals.me/images/BDM-logo-400px.png" alt="BrunchDeals.me" style="border:none;" /></div>
 <% end %></p>
@@ -13,7 +13,7 @@
 <div class="deals">
   <h1><%= deal['dealTitle'] %></h1>
   <h2> at <%= deal['name'] %></h2>
-  <p><img src="<%= deal['showImage'] %>" width = "200" ></p>
+  <img class="deal-image" src="<%= deal['showImage'] %>" width = "200" >
   <h3><a href="<%= deal['URL'] %>" target="_blank">Grab this Deal!</a></h3>
 
   <p>Expires on: <%= deal['expirationDate'] %></p>

@@ -1,32 +1,39 @@
-<div class="logo">
+
 <%= link_to root_path do %>
-  <div><img src="http://brunchdeals.me/images/BDM-logo-400px.png" alt="BrunchDeals.me" style="border:none;" /></div>
+<img class="logo2" src="http://brunchdeals.me/images/BDM-logo-400px.png" alt="BrunchDeals.me" style="border:none;" />
 <% end %>
+</div>
 
 <% @deals.each do |deal| %>
 <div class="deals">
   <h1><%= deal['dealTitle'] %></h1>
-  <h2> at <%= deal['name'] %></h2>
-  <p><img src="<%= deal['showImage'] %>" width = "400" ></p>
-  <p><%= deal['dealinfo'] %></p>
-  <p>Expires on: <%= deal['expirationDate'] %></p>
-  <button><a href="<%= deal['URL'] %>" target="_blank">Grab this Deal!</a></button>
-  <h3>Do you want to save this brunch deal? </h3>
-  <button><%= link_to "Join us here", new_user_path %></button>
-  </div>
-  <% if logged_in? %>
-  <p>
-    <%= form_tag user_favorites_path(session[:user_id]), method: :post  do %>
-      <%= hidden_field_tag 'dealTitle', deal['dealTitle'] %>
-      <%= hidden_field_tag 'name', deal['name'] %>
-      <%= hidden_field_tag 'showImage', deal['showImage'] %>
-      <%= hidden_field_tag 'URL', deal['URL'] %>
-      <%= hidden_field_tag 'dealinfo', deal['dealinfo'] %>
-      <%= hidden_field_tag 'expirationDate', deal['expirationDate'] %>
-      <%= submit_tag "Add to favorites" %>
+  <h2> at <%= deal['name'] %></h2>    
+    <img class="deal-image" src="<%= deal['showImage'] %>" width = "400" >
+    <p><%= deal['dealinfo'] %></p>
+  Expires on: <%= deal['expirationDate'] %></p>
 
-    <% end %>
-  </p> 
+    <button><a href="<%= deal['URL'] %>" target="_blank">Grab this Deal!</a></button>
+
+  <h3>Do you want to save this brunch deal? </h3>
+    <button><%= link_to "Join us here", new_user_path %></button>
+</div>
+
+<% if logged_in? %>
+<p>
+  <%= form_tag user_favorites_path(session[:user_id]), method: :post  do %>
+  <%= hidden_field_tag 'dealTitle', deal['dealTitle'] %>
+  <%= hidden_field_tag 'name', deal['name'] %>
+  <%= hidden_field_tag 'showImage', deal['showImage'] %>
+  <%= hidden_field_tag 'URL', deal['URL'] %>
+  <%= hidden_field_tag 'dealinfo', deal['dealinfo'] %>
+  <%= hidden_field_tag 'expirationDate', deal['expirationDate'] %>
+  <%= submit_tag "Add to favorites" %>
   <% end %>
+</p> 
+<% end %>
 <% end %>
 
+<footer>
+  Powered by: <a href="http://www.8coupons.com" target="_blank">
+    <img id="coupon-logo" src="http://8coupons.com/static_new/images/graphics/8coupons-med.png" width = "100"/>
+</footer>
