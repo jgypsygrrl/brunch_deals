@@ -1,5 +1,7 @@
 # Brunch Deals App
 
+![image](http://brunchdeals.me/images/BDM-logo-500px.png)
+
 ### GA WDI NYC Jan 14, Project 1
 
 ### Overview
